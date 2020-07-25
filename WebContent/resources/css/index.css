@@ -1,0 +1,124 @@
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #21ade2;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-primary{
+	color: #21ade2!important;
+}
+
+
+/* Navbar 
+*/
+.navbar-music{
+	width:100%;
+}
+
+
+/* drop down main*/
+@media( min-width: 960px){
+
+	.main-drop-down{
+	    left: -95px;	
+	}	
+}
+	
+
+
+
+/** card template */
+@media( min-width: 576px){
+	
+	.card-template{
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+}
+
+
+
+
+/* music list */
+	.music-list{
+		list-style:none;
+	}
+	.music-item{
+		display:flex;
+		align-items:center;
+		justify-content: center;
+	    background: #f6f4f6;
+	    
+	}
+		
+	
+	
+
+/*modal for music form*/
+#modal-music-creator{
+	margin-top:120px;
+}
+
+
+/*create music from /home*/
+.create-music .card{
+	background: url(https://anacuder.com/wp-content/uploads/2017/05/music-harmony-wallpaper-wallpapers.jpg);
+    background-repeat: no-repeat;
+    padding-top: 30px;
+	background-position: center -290px;
+}
+
+
+/** for single music controller for one music*/
+.container-music-single{
+	display:flex;
+	flex-direction: column;
+	
+} 
+.container-music-single .audio{
+	
+	align-items:center;
+	justify-content: center;
+	display:flex;
+}
+
+/*------------------utilitários-----------------*/
+
+.no-border{
+	border:none;
+}
+
+
+ @media( max-width: 576px){
+	.card{
+		border: none;
+	}
+}
+	
+ 
