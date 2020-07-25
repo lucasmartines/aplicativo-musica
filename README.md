@@ -13,36 +13,25 @@ Tecnologias utilizadas:
 
 # Tela Principal
 
-![](.//media/image1.png){width="5.905555555555556in"
-height="2.8604166666666666in"}
-
+![](./docs/media/image1.png)
 Formulário para Inserção de musica
 
-![](.//media/image2.png){width="5.905555555555556in"
-height="2.8368055555555554in"}
+![](./docs/media/image2.png)
 
 Formulário para Modificar Uma Música
 
-![](.//media/image3.png){width="5.905555555555556in"
-height="2.8229166666666665in"}
-
+![](./docs/media/image3.png)
 # Buscador
 
-![](.//media/image4.png){width="5.905555555555556in"
-height="1.1979166666666667in"}
+![](./docs/media/image4.png)
 
 **No aplicativo é possível:**
 
 -   Inserir uma Música
-
 -   Atualizar uma Música
-
 -   Deletar uma Música
-
 -   Listar uma Música
-
 -   Ouvir uma Música
-
 -   Baixar uma Música
 
 # Aprendizados:
@@ -60,8 +49,5 @@ height="1.1979166666666667in"}
 
 Uso de tags para importação de arquivos
 
-![](.//media/image5.png){width="5.905555555555556in"
-height="1.136111111111111in"}Uso de expressões e jstl
-
-![](.//media/image6.png){width="5.905555555555556in"
-height="1.2215277777777778in"}
+![](./docs/media/image5.png)
+![](./docs/media/image6.png)
