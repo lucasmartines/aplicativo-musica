@@ -87,7 +87,10 @@ public class MusicControllerGet extends HttpServlet
 		return Optional.ofNullable( request.getParameter("isPrivate") );
 	}
 	
-	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request,response);
+	}
 	
 	private static final long serialVersionUID = 1L;
 

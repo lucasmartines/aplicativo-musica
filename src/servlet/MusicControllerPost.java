@@ -67,9 +67,9 @@ public class MusicControllerPost extends HttpServlet {
 				
 				saveOrUpdateUsingIdParam(request, response);
 				
-				ifExistsErrorsThenThrowRuntimeException(request,response);
+				ifExistsErrorsThenRedirectWithErrors(request,response);
 				
-				redirectToJspHome(request, response);
+				ifDontExistErrorsThenredirectToJspHome(request, response);
 			
 			
 	}
@@ -79,16 +79,17 @@ public class MusicControllerPost extends HttpServlet {
 			newMusic.setId( Long.parseLong( request.getParameter("id") ) );
 		}
 	}
-	private void ifExistsErrorsThenThrowRuntimeException(HttpServletRequest request , HttpServletResponse response) throws RuntimeException, ServletException, IOException {
+	private void ifExistsErrorsThenRedirectWithErrors(HttpServletRequest request , HttpServletResponse response) throws RuntimeException, ServletException, IOException {
 		if( errors.size() > 0) {
 						
 			request.setAttribute("errorMap", errors );
-			response.sendRedirect( request.getContextPath() + "/");
+			
+			request.getRequestDispatcher(  "/" ).forward(request, response);
 		}
 	}
 	
 	
-	private void redirectToJspHome(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	private void ifDontExistErrorsThenredirectToJspHome(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		if( errors.size() == 0) {
 			response.sendRedirect( request.getContextPath() + "/");	
@@ -120,6 +121,7 @@ public class MusicControllerPost extends HttpServlet {
 			}			
 		}catch( Exception e ) {
 			errors.put("arquivo", "O arquivo não pode ser enviado");
+			
 		}
 		
 		return "";

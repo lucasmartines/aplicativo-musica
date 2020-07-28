@@ -32,7 +32,7 @@
 		type="file" 
 		placeholder="Sua Musica"
 		accept=".mp3"
-		required
+		
 	/>
 	     				
 	<span class="text-red">  </span>

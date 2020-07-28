@@ -7,6 +7,13 @@
 <%@include file="template_parts/navbar.jsp" %>	
 
 	<div class="container">
+		<% if( request.getAttribute("errorMap") != null ){ %>
+			<div class="alert alert-danger mt-2" role="alert">
+				<%=request.getAttribute("errorMap") %>
+			</div>
+		<% } %>
+	</div>
+	<div class="container">
 	
 		<section class="create-music row my-2">
 			<div class="card card-template col">
@@ -49,7 +56,7 @@
 		<%@include file="template_parts/_listMusic.jsp" %>
 
 		<c:if test="true">
-			show me
+			<footer> Criado por Lucas Martines </footer>
 		</c:if>
 	</div>
 	
