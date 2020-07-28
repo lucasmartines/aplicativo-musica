@@ -120,7 +120,7 @@ public class MusicControllerPost extends HttpServlet {
 				    return ResourceUtil.getResourceUriAndAddThisName( part.getSubmittedFileName() );
 			}			
 		}catch( Exception e ) {
-			errors.put("arquivo", "O arquivo não pode ser enviado");
+			errors.put("arquivo", "O arquivo não pode ser enviado" + e.getMessage() );
 			
 		}
 		

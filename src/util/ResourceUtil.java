@@ -7,9 +7,19 @@ import javax.servlet.http.HttpServletRequest;
 public class ResourceUtil {
 	
 	public static String getTheAbsolutePathOfFileUploaded(HttpServletRequest request) {
-		 
-		return request.getServletContext().getRealPath("") 
+		
+		
+		
+		String local = request.getServletContext().getRealPath("") 
 				+ File.separator + "resources" + File.separator + "musics";
+		
+		File f = new File(local);
+		
+		if(!f.exists()) {
+			f.mkdir();
+		}
+		
+		return local ;
 	}
 	
 	/**
