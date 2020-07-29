@@ -69,7 +69,7 @@ public class MusicControllerPost extends HttpServlet {
 				
 				ifExistsErrorsThenRedirectWithErrors(request,response);
 				
-				ifDontExistErrorsThenredirectToJspHome(request, response);
+				ifDontExistErrorsThenRedirectToJspHome(request, response);
 			
 			
 	}
@@ -89,7 +89,7 @@ public class MusicControllerPost extends HttpServlet {
 	}
 	
 	
-	private void ifDontExistErrorsThenredirectToJspHome(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	private void ifDontExistErrorsThenRedirectToJspHome(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		if( errors.size() == 0) {
 			response.sendRedirect( request.getContextPath() + "/");	
@@ -110,12 +110,12 @@ public class MusicControllerPost extends HttpServlet {
 				    if( nameOfUploadedFile == null)  { nameOfUploadedFile = "random"; }
 	
 				    String absolutePath = ResourceUtil.getTheAbsolutePathOfFileUploaded(request);
-				   
-				    InputStream sourceOfMusicPart = part.getInputStream();
-				    Path destinyOfMusicPart = Paths.get( absolutePath + File.separator+nameOfUploadedFile );
+				    String destinyPathURI = absolutePath + File.separator+nameOfUploadedFile;
 				    
-				    
-				    saveUploadedFileToDisc(sourceOfMusicPart, destinyOfMusicPart);
+				    InputStream InputStreamOfMusic = part.getInputStream();
+				    Path destinyOfMusicPath = Paths.get( destinyPathURI );
+
+				    saveUploadedFileToDisc(InputStreamOfMusic, destinyOfMusicPath);
 								    
 				    return ResourceUtil.getResourceUriAndAddThisName( part.getSubmittedFileName() );
 			}			
