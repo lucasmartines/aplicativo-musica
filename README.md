@@ -1,7 +1,6 @@
 # O meu primeiro aplicativo em java web:
 
-![link pro app](http://3.15.159.249:8080/music/)
-
+[link pro app](http://3.15.159.249:8080/music/)
 
 Tecnologias utilizadas:
 
