@@ -1,6 +1,6 @@
 # O meu primeiro aplicativo em java web:
 
-[link pro app](http://app.martinesdev.com.br:8080/music/)
+[link pro app](http://martinesdev.com.br/musica)
 
 Tecnologias utilizadas:
 
